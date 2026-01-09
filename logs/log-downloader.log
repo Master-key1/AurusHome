@@ -1,0 +1,71 @@
+2025-12-30 16:33:23 INFO  com.nexe.service.LogToolApplication - ==== Aurus Log Downloader Started ====
+2025-12-30 16:33:28 INFO  com.nexe.service.LogToolApplication - Connecting to SCP server...
+2025-12-30 16:33:31 INFO  com.nexe.service.LogToolApplication - Connected to uat42.auruspay.com
+2025-12-30 16:33:31 INFO  com.nexe.service.LogToolApplication - Executing Command: zgrep --color --text "193253632485488030" /opt/auruspay_switch/log/auruspay/*.gz
+2025-12-30 16:33:32 INFO  com.nexe.service.LogToolApplication - Parsing logs...
+2025-12-30 16:33:32 INFO  com.nexe.service.LogToolApplication - 
+========= TRANSACTION DETAILS =========
+Transaction ID : 193253632485488030
+Processor      : null
+Amount         : null
+Card Type      : null
+Terminal ID    : null
+Merchant ID    : null
+STAN           : null
+RRN            : null
+Approval Code  : null
+Response Code  : null
+Response Msg   : null
+=======================================
+
+2025-12-30 16:34:11 INFO  com.nexe.service.LogToolApplication - ==== Aurus Log Downloader Started ====
+2025-12-30 16:34:15 INFO  com.nexe.service.LogToolApplication - Connecting to SCP server...
+2025-12-30 16:34:18 INFO  com.nexe.service.LogToolApplication - Connected to uat42.auruspay.com
+2025-12-30 16:34:18 INFO  com.nexe.service.LogToolApplication - Executing Command: hostname
+2025-12-30 16:34:19 INFO  com.nexe.service.LogToolApplication - Parsing logs...
+2025-12-30 16:34:19 INFO  com.nexe.service.LogToolApplication - 
+========= TRANSACTION DETAILS =========
+Transaction ID : 193253632485488030
+Processor      : null
+Amount         : null
+Card Type      : null
+Terminal ID    : null
+Merchant ID    : null
+STAN           : null
+RRN            : null
+Approval Code  : null
+Response Code  : null
+Response Msg   : null
+=======================================
+
+2025-12-30 16:35:25 INFO  com.nexe.service.LogToolApplication - ==== Aurus Log Downloader Started ====
+2025-12-30 16:35:28 INFO  com.nexe.service.LogToolApplication - Connecting to SCP server...
+2025-12-30 16:35:30 INFO  com.nexe.service.LogToolApplication - Connected to uat42.auruspay.com
+2025-12-30 16:35:30 INFO  com.nexe.service.LogToolApplication - Executing Command: hostname
+2025-12-30 16:35:31 INFO  com.nexe.service.LogToolApplication - Parsing logs...
+2025-12-30 16:35:31 INFO  com.nexe.service.LogToolApplication - 
+========= TRANSACTION DETAILS =========
+Transaction ID : 193253632485488030
+Processor      : null
+Amount         : null
+Card Type      : null
+Terminal ID    : null
+Merchant ID    : null
+STAN           : null
+RRN            : null
+Approval Code  : null
+Response Code  : null
+Response Msg   : null
+=======================================
+
+2025-12-30 16:39:35 INFO  com.nexe.service.AurusLogDownloader - Enter Aurus Transaction ID:
+2025-12-30 16:39:39 ERROR com.nexe.service.AurusLogDownloader - Log download failed
+java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Integer.parseInt(Integer.java:624)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at com.nexe.service.AurusLogDownloader.openSecureTunnelAndFetchLogs(AurusLogDownloader.java:50)
+	at com.nexe.service.AurusLogDownloader.main(AurusLogDownloader.java:36)
+2025-12-30 16:42:32 INFO  com.nexe.service.LogFileDownloader - ========== ZLOG UTILITY STARTED ==========
+2025-12-30 16:42:34 INFO  com.nexe.service.LogFileDownloader - Connecting Jump Server...
+2025-12-30 19:59:08 INFO  com.nexe.service.LogFileDownloader - ========== ZLOG UTILITY STARTED ==========
+2025-12-30 19:59:51 INFO  com.nexe.service.LogFileDownloader - Connecting Jump Server...
