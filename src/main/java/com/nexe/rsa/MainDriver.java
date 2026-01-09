@@ -1,0 +1,23 @@
+package com.nexe.rsa;
+
+import java.util.Scanner;
+
+public class MainDriver {
+
+    static String publicKey="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxnD87c632yGCYMdgrUqdBlGex/3s5VxlMJO073yIvfPichG3c9IuoqN8tcj5R+4CNkGxdGSb6xd0yjUiyBninD0FWOyNMP4eLNooRKu7S2j6Cg7JsPSvBfBx8wZhjtGsYPqPfsxXhF8tffuYrJqmduSFR6GLjymhrIQ4gp3nM1JuFtLUQBH5aw1XHhGhl96jLamPUEWvPVvaFwWFYuQvaG3tLYOajpV2RFHIUSBiNiAi6lwWSw10lqyXhUKGrGKr0oEqxK99RroKrDWMzB925smFrJGuJe7gEBJb1krpdsVDF9Rt9EoltGk0vUW9NSSRzRJwcn+ma5xDkW8V9OI+ywIDAQAB";
+    static String privateKey="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDGcPztzrfbIYJgx2CtSp0GUZ7H/ezlXGUwk7TvfIi98+JyEbdz0i6io3y1yPlH7gI2QbF0ZJvrF3TKNSLIGeKcPQVY7I0w/h4s2ihEq7tLaPoKDsmw9K8F8HHzBmGO0axg+o9+zFeEXy19+5ismqZ25IVHoYuPKaGshDiCneczUm4W0tRAEflrDVceEaGX3qMtqY9QRa89W9oXBYVi5C9obe0tg5qOlXZEUchRIGI2ICLqXBZLDXSWrJeFQoasYqvSgSrEr31GugqsNYzMH3bmyYWska4l7uAQElvWSul2xUMX1G30SiW0aTS9Rb01JJHNEnByf6ZrnEORbxX04j7LAgMBAAECggEALMbqC68NhYC2LqhOhEvFyts3/OCrR8Xlf2SU+0UaheI2Qo8E2jmfFEvXpB1JQpXOIfgI1r6tAAs26zm6M3TD0YVjY4FdCqUMogpH89bcWFPDt+lGUYukwq5SyAe0k8l0IB3pqy7owJHJbhgLh0cOMN23xUYKe69lL8xWBAMlXErjOFgIkj4G0v+4MAmV1QNrKp2PtakjUD8ywD+xcuElWvDZgAAVEDpC5iSqIVKLpd1IbgQCqHsEEbdCzBEUNTOIyHMe5fe4QQDsJeRh+FQX6X4OtbfdtRz6LBpo9iIffLfX/IYA2uZf+MJXvkT+Q58OXRY8FR4jMyKuS3jExtER4QKBgQDOcUu3U7E8bb5i5qNM0/eGefYSCnBmE6ZxU1GxU6nlInS2p1Uc8gAFq6Q7nlNNRHZMZB3TtFWIG4dS+XIH3z65EbkxNJ7+6GQxeqReE9Qg13VgazgrAGJRnYirmmlgdKy7zGz+wj7PP3keR4TicZ3P2RAzTZ8lQk2phJCi/9CN7wKBgQD2E/ys+8ZNfJtGwtxCpbCuosrsWxOospAsLzK5xV4EQ8npKZK9T98hycfJ8jfXYLeCQ9RNlxrdpl3DWJM1XJ8IOClqEUzWTCw2R6WudxlEg2tFHKyd28GcWNZ2iwtU0ThegLBBr4e4zNbfrSMJAk8eiB05an/VIkfcNifGiyk45QKBgEOUlyLGhQixLFgYBHFMGoWtOz6gqDbiS+RhUCbqqn1WEDsTACvflN5GWBckN0TeGpPbWmBJco6B5ITnH8sv68qN4MAY58uuq83+xfv+Jb0yizwrHVIGaCkrlugGPmTTDRDVVQD4+bLCppWg+AFhDDZUapdA285IrD/II8kYUV+FAoGBAI4iUUohSxMqrA2dM9gTGBBm20rV+G7yZLAAuw3uYDWaah+Q8b8DSWCcyhdtHq/6n0RQpWoDo3LvSy0wFic2Tm1S8yjewUDuUoMvsxUomaGnPuh2fYXYjuYdshJakbr19dcwAZ6PIpetSVd9C8WCXezGtgqZ5yhWWqdpaGQXsUG5AoGBALjB2w3SZSM0sDdk6eWxR8eBINEx0weEIug4IBJGpuUjymkx1nq88Qry9etgjjrMTVZh8HOu2oMzgLpvJQAfuXcRRvPMzvTToxWWO5Y0hjZSVIvdwjZTgJPs/NS1LSnoet2VKKOfyI2dcyLsYu9AHCd/l7qODUBQqDrbnozSBaX1";
+
+    public static void main(String[] args) throws Exception {
+        String plainText = "I'm Nitesh kharose_2k25!";
+        System.out.println("Enter Data : "+plainText);
+        //String plainText = new Scanner(System.in).nextLine();
+
+        String encryptedData = RSAEncryptUtil.encrypt(plainText, publicKey);
+        System.out.println("Encrypdted Data :" +encryptedData);
+
+        String decryptedDate = RSADecryptUtil.decrypt(encryptedData, privateKey);
+        System.out.println("DecryptedData: "+ decryptedDate);
+
+    }
+
+}
